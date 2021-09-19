@@ -1,1 +1,20 @@
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rps
+  namespace: stage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rps
+  template:
+    metadata:
+      labels:
+        app: rps
+    spec:
+      containers:
+        - image: 'kumgcp/spintest'
+          name: rps
+          ports:
+            - containerPort: 80
