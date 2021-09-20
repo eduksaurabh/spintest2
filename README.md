@@ -38,6 +38,7 @@ sudo systemctl stop docker
 + uninstall docker-ce
 ```
 sudo yum remove docker-ce
+
 ```
 
 + remove all images, container, volumes
