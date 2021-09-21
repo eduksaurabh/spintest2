@@ -4,10 +4,15 @@ metadata:
   name: prod
   namespace: prod
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: prod
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 0
+    type: RollingUpdate
   template:
     metadata:
       labels:
