@@ -21,13 +21,13 @@ spec:
         app: prod
     spec:
       containers:
-        - image: 'kumgcp/spintest'
-          name: prod
-          ports:
-            - containerPort: 80
-            resources:
-              requests:
-                cpu: "250m"
+      - image: 'kumgcp/spintest'
+        name: prod
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: "250m"
 
 ---
 apiVersion: autoscaling/v1
