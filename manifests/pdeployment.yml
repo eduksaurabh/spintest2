@@ -25,6 +25,10 @@ spec:
           name: prod
           ports:
             - containerPort: 80
+            resources:
+              requests:
+                cpu: "250m"
+
 ---
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
